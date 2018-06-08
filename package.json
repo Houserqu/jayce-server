@@ -2,12 +2,13 @@
   "name": "jayce-server",
   "version": "0.1.0",
   "description": "a real-time and single page app framework base on websocket",
-  "main": "index.js",
+  "main": "./dist/index.js",
   "directories": {
     "lib": "lib"
   },
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "build": "babel src --out-dir dist"
   },
   "repository": {
     "type": "git",
@@ -24,5 +25,17 @@
   "bugs": {
     "url": "https://github.com/Houserqu/jayce-server/issues"
   },
-  "homepage": "https://github.com/Houserqu/jayce-server#readme"
+  "homepage": "https://github.com/Houserqu/jayce-server#readme",
+  "dependencies": {
+    "babel-polyfill": "^6.26.0",
+    "ws": "^5.2.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-async-to-generator": "^6.24.1",
+    "babel-plugin-transform-decorators-legacy": "^1.3.5",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.7.0"
+  }
 }
